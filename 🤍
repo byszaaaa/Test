@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun</title>
+    <style>
+        body {
+            margin: 0;
+            background: #ffcee0;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }h1 {
+        font-size: 3rem;
+        margin-top: 40px;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 10px #ff66cc; }
+        to { text-shadow: 0 0 25px #ff1493; }
+    }
+
+    /* Balloon animation */
+    .balloon {
+        position: absolute;
+        bottom: -100px;
+        width: 80px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--color);
+        animation: floatUp 8s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(-120vh) rotate(10deg); opacity: 0; }
+    }
+
+    /* Sparkles */
+    .sparkle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        border-radius: 50%;
+        animation: sparkle 1.5s linear infinite;
+        opacity: 0;
+    }
+
+    @keyframes sparkle {
+        0% { transform: scale(0.2); opacity: 0; }
+        50% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(0.2); opacity: 0; }
+    }
+
+    .spotify {
+        margin-top: 20px;
+    }
+
+    /* Entrance animation */
+    .enter {
+        opacity: 0;
+        transform: scale(0.7);
+        animation: enterAnim 1.2s ease forwards;
+    }
+
+    @keyframes enterAnim {
+        0% { opacity: 0; transform: scale(0.7); }
+        60% { opacity: 1; transform: scale(1.05); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+</style>
+</head>
+<body>
+    <h1 class="enter">🎉 Selamat Ulang Tahun! 🎉</h1><p style="max-width:700px;margin:20px auto;font-size:1.1rem;line-height:1.7;">
+selamat ulang tahun kaninn sayangkuu hari ini adalah hari yang spesial, bukan hanya karena kamu bertambah usia, tapi karena dunia pernah kedatangan seseorang seberarti kamu. semoga di umur yang baru ini, segala hal baik datang mendekat kebahagiaan yang tulus, kesempatan yang lebih besar, serta ketenangan dalam setiap langkah yang kamu ambil.<br><br>
+
+Aku berharap kamu selalu dikelilingi orang-orang yang sayang sama kamu, yang mampu menjaga hati dan senyumm kamuu. semoga apa pun yang selama ini kamu perjuangkan pelan-pelan mulai menemukan jalannya. Ingat, tidak ada perjalanan yang sia-sia setiap proses sudah membentuk kamu jadi pribadi yang jauh lebih kuat dan lebih baik yaaaa sayangg.<br><br>
+
+semoga tahun ini membawa banyak kejutan manis, keberanian baru untuk mencoba hal-hal yang kamu inginkan, serta keteguhan hati ketika hidup menguji. aku doainn kamu semogaaa diberi kesehatan tanpa kurang, rezeki yang berlimpah, dan kebahagiaan yang bertahan lama. Semoga setiap doa yang kamu bisikkan dalam diam akhirnya sampai pada waktunya dan dikabulkan satu per satu.<br><br>
+
+terima kasih sudah bertahan sampai sejauh ini sayangggg, sudah berproses, sudah bertumbuh. kamu layak merasa bangga pada diri sendiri. semoga hari ini penuh senyum, penuh rasa syukur, dan penuh cinta.<br><br>
+
+selamat ulang tahun sayanggkuu semoga tahun ini menjadi bab terbaik dalam hidup kamuuuu yaaaa. 🎂✨💐🤍🤍
+</p>
+
+<div class="spotify enter" style="display:flex; justify-content:center; align-items:center; width:100%; margin-top:25px;">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4GfK1qOF3uBWidbPlTCQRL?utm_source=generator" width="350" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<script>
+    // Create floating balloons
+    const colors = ["#ff4d6d", "#ffb3c6", "#ffd60a", "#70e000", "#5390d9", "#6930c3"];
+
+    for (let i = 0; i < 15; i++) {
+        const b = document.createElement("div");
+        b.classList.add("balloon");
+        b.style.left = Math.random() * 100 + "vw";
+        b.style.animationDuration = 6 + Math.random() * 6 + "s";
+        b.style.setProperty("--color", colors[Math.floor(Math.random() * colors.length)]);
+        document.body.appendChild(b);
+    }
+
+    // Create sparkles
+    for (let i = 0; i < 40; i++) {
+        const s = document.createElement("div");
+        s.classList.add("sparkle");
+        s.style.left = Math.random() * 100 + "vw";
+        s.style.top = Math.random() * 100 + "vh";
+        s.style.animationDelay = Math.random() + "s";
+        document.body.appendChild(s);
+    }
+</script>
+
+</body>
+</html>
